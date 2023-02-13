@@ -1,1 +1,1 @@
-# talespire-cards-server
+# talecards-server
