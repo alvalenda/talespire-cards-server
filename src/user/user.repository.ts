@@ -39,7 +39,7 @@ export class UserRepository extends Repository<User> {
   }
 
   async findAll(): Promise<User[]> {
-    return this.find();
+    return await this.find({ select: ['id', 'name', 'email'] });
   }
 
   private async hashPassword(password: string, salt: string): Promise<string> {
