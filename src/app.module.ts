@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { typeOrmConfig } from './common/db/typeorm.config';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { typeOrmConfig } from './common/db/typeorm.config';
       synchronize: Boolean(process.env.RUN_MIGRATIONS) || false,
       entities: [__dirname + '/**/*.entity.{js,ts}'],
     }),
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
