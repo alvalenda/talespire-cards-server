@@ -1,6 +1,6 @@
 {
-  "name": "provao-server",
-  "version": "0.0.1",
+  "name": "base-typeorm-server",
+  "version": "0.1.1",
   "description": "",
   "author": "",
   "private": true,
